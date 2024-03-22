@@ -4,3 +4,5 @@ jupyterlab-widgets
 jupyterlab_code_formatter
 jupyterlab_git
 lckr_jupyterlab_variableinspector
+nbqa
+autoflake
