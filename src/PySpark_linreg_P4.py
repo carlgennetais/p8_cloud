@@ -1,5 +1,5 @@
 import re
-from collections import Counter
+# from collections import Counter
 
 from pyspark import SparkConf, SparkContext
 from pyspark.ml.evaluation import RegressionEvaluator
@@ -8,7 +8,9 @@ from pyspark.ml.regression import LinearRegression
 from pyspark.sql import SQLContext
 from pyspark.sql.functions import count, isnan, when
 import json
-import boto.s3, boto.s3.key
+import sys
+import boto.s3
+import boto.s3.key
 
 display_opt = SparkConf().set("spark.sql.repl.eagerEval.enabled", True)
 sc = SparkContext(conf=display_opt)
@@ -18,7 +20,9 @@ sqlContext = SQLContext(sc)
 df = (
     sqlContext.read.format("com.databricks.spark.csv")
     .options(header="true", inferschema="true")
-    .load("../data/raw/2016_Building_Energy_Benchmarking.csv")
+    # .load("../data/raw/2016_Building_Energy_Benchmarking.csv")
+    # load url from s3 bucket ?
+    .load(sys.argv[1])
 )
 # print columns
 df.cache()
