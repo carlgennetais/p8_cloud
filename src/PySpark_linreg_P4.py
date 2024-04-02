@@ -7,6 +7,8 @@ from pyspark.ml.feature import VectorAssembler
 from pyspark.ml.regression import LinearRegression
 from pyspark.sql import SQLContext
 from pyspark.sql.functions import count, isnan, when
+import json
+import boto.s3, boto.s3.key
 
 display_opt = SparkConf().set("spark.sql.repl.eagerEval.enabled", True)
 sc = SparkContext(conf=display_opt)
@@ -114,3 +116,11 @@ print(
 print("numIterations: %d" % trainingSummary.totalIterations)
 print("objectiveHistory: %s" % str(trainingSummary.objectiveHistory))
 trainingSummary.residuals.show()
+
+# Log results to S3
+
+conn = boto.s3.connect_to_region("eu-north-1")
+bucket = conn.get_bucket("carl-p8")
+key = boto.s3.key.Key(bucket, "predictions.txt")
+
+key.set_contents_from_string(json.dumps(lr_predictions, indent=2))
