@@ -124,7 +124,7 @@ trainingSummary.residuals.show()
 # Log results to S3
 
 conn = boto.s3.connect_to_region("eu-north-1")
-bucket = conn.get_bucket("carl-p8")
-key = boto.s3.key.Key(bucket, "predictions.txt")
+bucket = conn.get_bucket("carl-p8-v2")
+key = boto.s3.key.Key(bucket, "/p4_cloud/predictions.txt")
 
 key.set_contents_from_string(json.dumps(lr_predictions, indent=2))
