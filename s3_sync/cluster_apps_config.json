@@ -1,0 +1,9 @@
+[
+  {
+    "classification": "jupyter-s3-conf",
+    "properties": {
+      "s3.persistence.bucket": "carl-p8-v2",
+      "s3.persistence.enabled": "true"
+    }
+  }
+]
