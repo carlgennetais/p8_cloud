@@ -87,3 +87,10 @@ target/
 
 # Mypy cache
 .mypy_cache/
+.jupyter
+.virtual_documents/notebooks
+notebooks/P4_élec_01_exploration.ipynb
+notebooks/P4_élec_02_modeles.ipynb
+s3_sync/results.csv
+s3_sync/Results
+s3_sync/sample_test
