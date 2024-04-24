@@ -1,10 +1,49 @@
-P8_cloud
-==============================
+# P8_cloud
 
 OpenClassrooms Projet 8 : Déployer un modèle dans le cloud
 
-Project Organization
-------------
+## Description
+
+[Project briefing from OpenClassrooms](https://openclassrooms.com/fr/paths/164/projects/633/assignment)
+Une startup de l'AgriTech souhaite développer une application mobile de classification de fruits par reconnaissance d'image, avant de l'implémenter dans un robot cueilleur.
+
+**Mission** : mettre en place une **architecture Big Data sur le cloud** pour traiter les données de l'application mobile
+
+- calcul distribué avec Spark
+- cloud AWS dans le respect des normes RGPD
+- diffusion des poids du modèle TensorFlow
+- réduction de dimension PCA
+- sans entrainer modèle
+
+## Usage
+
+## Data
+
+- Kaggle dataset : <https://www.kaggle.com/datasets/moltean/fruits>
+- 131 fruits, 90380 images
+
+```raw
+├── Apple Braeburn
+│   ├── 3_100.jpg
+│   ├── r_3_100.jpg
+│   └── ...
+├── Banana
+│   ├── 12_100.jpg
+│   ├── r_105_100.jpg
+│   └── ...
+├── Strawberry
+│   ├── 100_100.jpg
+│   ├── r_64_100.jpg
+│   └── ...
+└── ...
+    └── ...
+```
+
+## Install
+
+## Makefile
+
+## Project Organization
 
     ├── LICENSE
     ├── Makefile           <- Makefile with commands like `make data` or `make train`
@@ -48,8 +87,3 @@ Project Organization
     │       └── visualize.py
     │
     └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
-
-
---------
-
-<p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
