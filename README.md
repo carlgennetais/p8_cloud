@@ -2,6 +2,16 @@
 
 OpenClassrooms Projet 8 : Déployer un modèle dans le cloud
 
+<!--toc:start-->
+
+- [Description](#description)
+- [Usage](#usage)
+- [Data](#data)
+- [Install](#install)
+- [Makefile](#makefile)
+- [Project Organization](#project-organization)
+<!--toc:end-->
+
 ## Description
 
 [Project briefing from OpenClassrooms](https://openclassrooms.com/fr/paths/164/projects/633/assignment)
@@ -22,32 +32,29 @@ Une startup de l'AgriTech souhaite développer une application mobile de classif
 - Kaggle dataset : <https://www.kaggle.com/datasets/moltean/fruits>
 - 131 fruits, 90380 images
 
-```raw
-├── Apple Braeburn
-│   ├── 3_100.jpg
-│   ├── r_3_100.jpg
-│   └── ...
-├── Banana
-│   ├── 12_100.jpg
-│   ├── r_105_100.jpg
-│   └── ...
-├── Strawberry
-│   ├── 100_100.jpg
-│   ├── r_64_100.jpg
-│   └── ...
-└── ...
-    └── ...
-```
-
 ## Install
+
+```
+$ make requirements
+$ make data           # automatically download and unzip dataset from Kaggle
+```
 
 ## Makefile
 
+```
+Available rules:
+clean               Delete all compiled Python files
+clean_code          Clean notebooks and python fils with black and isort
+create_environment  Set up python interpreter environment
+data                Make Dataset
+lint                Lint using flake8
+requirements        Install Python Dependencies
+```
+
 ## Project Organization
 
-    ├── LICENSE
     ├── Makefile           <- Makefile with commands like `make data` or `make train`
-    ├── README.md          <- The top-level README for developers using this project.
+    ├── README.md          <- This file
     ├── data
     │   ├── external       <- Data from third party sources.
     │   ├── interim        <- Intermediate data that has been transformed.
@@ -61,9 +68,6 @@ Une startup de l'AgriTech souhaite développer une application mobile de classif
     │                         `1.0-jqp-initial-data-exploration`.
     │
     ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
-    │
-    ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-    │   └── figures        <- Generated graphics and figures to be used in reporting
     │
     ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
     │                         generated with `pip freeze > requirements.txt`
@@ -87,3 +91,7 @@ Une startup de l'AgriTech souhaite développer une application mobile de classif
     │       └── visualize.py
     │
     └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
+
+```
+
+```
