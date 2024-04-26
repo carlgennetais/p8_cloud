@@ -5,7 +5,6 @@ OpenClassrooms Projet 8 : Déployer un modèle dans le cloud
 <!--toc:start-->
 
 - [Description](#description)
-- [Usage](#usage)
 - [Data](#data)
 - [Install](#install)
 - [Makefile](#makefile)
@@ -24,8 +23,6 @@ Une startup de l'AgriTech souhaite développer une application mobile de classif
 - diffusion des poids du modèle TensorFlow
 - réduction de dimension PCA
 - sans entrainer modèle
-
-## Usage
 
 ## Data
 
@@ -61,13 +58,9 @@ requirements        Install Python Dependencies
     │   ├── processed      <- The final, canonical data sets for modeling.
     │   └── raw            <- The original, immutable data dump.
     │
-    ├── models             <- Trained and serialized models, model predictions, or model summaries
-    │
     ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
     │                         the creator's initials, and a short `-` delimited description, e.g.
     │                         `1.0-jqp-initial-data-exploration`.
-    │
-    ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
     │
     ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
     │                         generated with `pip freeze > requirements.txt`
@@ -91,7 +84,3 @@ requirements        Install Python Dependencies
     │       └── visualize.py
     │
     └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
-
-```
-
-```
