@@ -5,7 +5,6 @@ OpenClassrooms Projet 8 : Déployer un modèle dans le cloud
 <!--toc:start-->
 
 - [Description](#description)
-- [Usage](#usage)
 - [Data](#data)
 - [Install](#install)
 - [Makefile](#makefile)
