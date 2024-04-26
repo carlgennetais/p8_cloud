@@ -31,10 +31,11 @@ Une startup de l'AgriTech souhaite développer une application mobile de classif
 
 ## Install
 
-```
-$ make requirements
-$ make data           # automatically download and unzip dataset from Kaggle
-```
+- Create a new cluster in AWS EMR with the following configuration:
+  - pre-install apps : Hadoop, Spark, Jupyter, TensorFlow
+  - `bootstrap.sh` to install requirements
+  - `cluster_apps_config.json` to use S3 bucket as persistent storage in Jupyter
+  - private aws ssh keys
 
 ## Makefile
 
@@ -43,7 +44,7 @@ Available rules:
 clean               Delete all compiled Python files
 clean_code          Clean notebooks and python fils with black and isort
 create_environment  Set up python interpreter environment
-data                Make Dataset
+data                Make Dataset : download and unzip dataset from Kaggle
 lint                Lint using flake8
 requirements        Install Python Dependencies
 ```
